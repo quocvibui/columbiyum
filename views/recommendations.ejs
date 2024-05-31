@@ -1,0 +1,15 @@
+<%- include("header.ejs")%>
+
+<form class="main-card-holder" action = "/delete" method = "post">
+    <div class="main-card-holder">
+        <%for (let i = 0; i <ideas.length; i++){%>
+          <button onChange = "this.form.submit()" type="checkbox" name = "checkbox"
+          value = "<%=ideas[i]._id%>"
+          class = "card">
+                <p class = "card-font-clear"><%= ideas[i].name%></p>   
+          </button>
+      <%}%>
+    </div>
+</form>
+
+<%- include("footer_rec.ejs")%>
